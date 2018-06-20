@@ -10,6 +10,7 @@
     domain_name={{ ad_domain_name }}
     safe_mode_password={{ ad_safe_mode_password }}
   register: result
+  ignore_errors: true
 
 - name: Reboot upon promotion
   raw: shutdown /r
